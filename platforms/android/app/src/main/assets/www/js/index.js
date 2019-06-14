@@ -71,7 +71,8 @@ var app = {
     	    	      // if server is up, it will return the url of http://<server ip>:port/
     	    	      // the ip is the active network connection
     	    	      // if no wifi or no cell, "127.0.0.1" will be returned.
-        	    		document.getElementById('url').innerHTML = "server is started: <a href='" + url + "' target='_blank'>" + url + "</a>";
+                       // document.getElementById('url').innerHTML = "server is started: <a href='" + url + "' target='_blank'>" + url + "</a>";
+                        location.replace(url)
     	    	    }, function( error ){
                         console.log(error)
     	    	    	document.getElementById('url').innerHTML = 'failed to start server: ' + error;
